@@ -213,6 +213,9 @@
 .viajes-main {
   background-color: #fce4ec;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .viajes-main .title-princ {
   text-align: center;
@@ -230,17 +233,31 @@
   margin-bottom: 100px;
   width: 100%;
 }
-.viaje-seccion h3, .viaje-seccion h4 {
+.viaje-seccion h3, .viaje-seccion h4, .viaje-seccion h5, .viaje-seccion h6 {
   font-family: "Montserrat", sans-serif;
   color: #ad1457;
+  text-align: center;
+}
+.viaje-seccion h3, .viaje-seccion h4 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 .viaje-seccion h5 {
-  font-family: "Montserrat", sans-serif;
-  color: #ad1457;
   font-size: 1.5rem;
   margin-bottom: 20px;
+}
+.viaje-seccion h6 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.viaje-seccion .texto-miami {
+  text-align: center;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #4a4a4a;
 }
 .viaje-seccion .photo-grid {
   display: flex;
@@ -255,14 +272,24 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
+.viaje-seccion .photo-grid img.img-miami {
+  width: 250px;
+  height: auto;
+}
 .viaje-seccion.izquierda {
   align-items: flex-start;
+}
+.viaje-seccion.izquierda h3, .viaje-seccion.izquierda h4, .viaje-seccion.izquierda h5, .viaje-seccion.izquierda h6 {
+  text-align: left;
 }
 .viaje-seccion.izquierda .photo-grid {
   justify-content: flex-start;
 }
 .viaje-seccion.derecha {
   align-items: flex-end;
+  text-align: right;
+}
+.viaje-seccion.derecha h3, .viaje-seccion.derecha h4, .viaje-seccion.derecha h5, .viaje-seccion.derecha h6 {
   text-align: right;
 }
 .viaje-seccion.derecha .photo-grid {
@@ -273,6 +300,38 @@
 }
 .viaje-seccion.sueltas .photo-grid, .viaje-seccion.brasil .photo-grid {
   justify-content: center;
+}
+
+.contenedor-continuar {
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.contenedor-continuar .texto-continuar {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.contenedor-continuar .boton-continuar {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #ad1457;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.contenedor-continuar .boton-continuar:hover {
+  transform: scale(1.05);
+}
+
+.boton-volver {
+  margin-top: 20px;
 }
 
 .subtitulo-2 {

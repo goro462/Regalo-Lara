@@ -3,6 +3,9 @@
 .viajes-main {
     background-color: variables.$rosa-fondo;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra los botones al final
 
     .title-princ {
         text-align: center;
@@ -21,19 +24,24 @@
     margin-bottom: 100px;
     width: 100%;
 
-    h3, h4 {
+    h3, h4, h5, h6 {
         font-family: variables.$fuente-principal;
         color: variables.$rosa-oscuro;
-        font-size: 2.0rem;
-        margin-bottom: 20px;
-    }
- h5 {
-        font-family: variables.$fuente-principal;
-        color: variables.$rosa-oscuro;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        text-align: center;
     }
 
+    h3, h4 { font-size: 2.0rem; margin-bottom: 20px; }
+    h5 { font-size: 1.5rem; margin-bottom: 20px; }
+    h6 { font-size: 1.25rem; margin-bottom: 20px; width: 100%; }
+
+    .texto-miami {
+        text-align: center;
+        width: 100%;
+        font-family: variables.$fuente-principal;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: variables.$gris-oscuro;
+    }
 
     .photo-grid {
         display: flex;
@@ -41,29 +49,72 @@
         gap: 20px;
 
         img {
-            width: 300px; // Tamaño que te gustó
+            width: 300px;
             height: 350px;
             object-fit: cover;
             border: 8px solid white;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             border-radius: 4px;
+
+            &.img-miami {
+                width: 250px;
+                height: auto;
+            }
         }
     }
 
-    // Lógica del dibujo de Paint:
     &.izquierda {
-        align-items: flex-start; // Título y fotos a la izquierda
+        align-items: flex-start;
+        h3, h4, h5, h6 { text-align: left; }
         .photo-grid { justify-content: flex-start; }
     }
 
     &.derecha {
-        align-items: flex-end; // Título y fotos a la derecha
+        align-items: flex-end;
         text-align: right;
+        h3, h4, h5, h6 { text-align: right; }
         .photo-grid { justify-content: flex-end; }
     }
 
     &.sueltas, &.brasil {
-        align-items: center; // Centrados
+        align-items: center;
         .photo-grid { justify-content: center; }
     }
+}
+
+// ESTILOS NUEVOS PARA EL BOTÓN "CONTINUEMOS"
+.contenedor-continuar {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+
+    .texto-continuar {
+        font-family: variables.$fuente-principal;
+        font-weight: 600;
+        color: variables.$gris-oscuro;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .boton-continuar {
+        display: inline-block;
+        padding: 15px 40px;
+        background-color: variables.$rosa-oscuro;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px; // Estilo redondeado como el de la captura
+        font-family: variables.$fuente-principal;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.boton-volver {
+    // Mantén tus estilos actuales para el botón volver aquí
+    margin-top: 20px;
 }
