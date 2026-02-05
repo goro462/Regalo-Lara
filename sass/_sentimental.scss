@@ -1,0 +1,19 @@
+@use "variables";
+
+
+.sentimental-main {
+    padding: 40px 20px;
+    background-color: variables.$rosa-fondo;
+    text-align: center;
+
+    .title-princ {
+        max-width: 900px;
+        margin: 0 auto 50px;
+        line-height: 1.6;
+        font-family: variables.$fuente-principal;
+        color: variables.$gris-oscuro;
+        font-size: 1.3rem;
+        // Agregamos un detalle cursivo para que se vea más sentimental
+        font-style: italic; 
+    }
+}

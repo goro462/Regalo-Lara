@@ -49,3 +49,20 @@
     margin-bottom: 0px !important; 
     //   margin: -80px auto 40px !important; 
 }
+
+.subtitulo-5 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: variables.$rosa-oscuro !important;
+    font-family: variables.$fuente-principal !important; 
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+
+    // Quitamos el margen de abajo por completo
+    margin-top: 40px !important;
+    margin-bottom: 0px !important; 
+      margin: -60px auto 40px !important; 
+}
