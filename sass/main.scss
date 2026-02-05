@@ -1,0 +1,110 @@
+@use "variables";
+@use "header";
+@use "botones";
+@use "mi-gordita";
+@use "viajes";
+@use "textos";
+
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;600&display=swap');
+
+// --- Estilos Globales ---
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variables.$rosa-fondo;
+    font-family: variables.$fuente-principal;
+    overflow-x: hidden;
+}
+
+// --- Lógica del Botón Desplegable (Recuerdos) ---
+.btn-text-close { 
+    display: none; // Esconde "Cerrar recuerdos" por defecto
+}
+
+.toggle-input {
+    display: none; // Esconde el checkbox real
+
+    &:checked {
+        + .custom-button {
+            background-color: variables.$gris-oscuro; // Cambia el color del botón al abrir
+            
+            .btn-text-open { display: none; }    // Esconde "Un poquito de nosotros"
+            .btn-text-close { display: inline; } // Muestra "Cerrar recuerdos"
+        }
+
+        // Muestra el contenedor de la galería cuando el input está activo
+        ~ .gallery-wrapper {
+            max-height: 5000px; 
+            opacity: 1;
+            margin-top: 50px;
+        }
+    }
+}
+
+// Contenedor que controla la animación de apertura/cierre
+.gallery-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+// --- Secciones de Contenido ---
+.intro-text {
+    text-align: center;
+    padding: 0 20px;
+    margin-top: -10px;
+
+   h1 {
+        font-family: variables.$fuente-titulos;
+        color: variables.$rosa-oscuro;
+        font-size: 3.8rem;
+        margin-bottom: 25px;
+        font-weight: 700;
+    }
+}
+
+.gallery-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    img {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border: 6px solid variables.$blanco;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05); // Efecto de zoom en las fotos de la galería
+        }
+    }
+}
+
+.imagen-body {
+    display: block;      
+    margin: 40px auto !important; 
+    width: 60%;          
+    max-width: 500px;    
+    height: auto;        
+    object-fit: cover;
+    border-radius: 15px;
+    border: 6px solid variables.$blanco;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,143 @@
+@use "variables";
+
+.main-header {
+    background: linear-gradient(rgba(255, 182, 193, 0.8), rgba(255, 182, 193, 0.8));
+    padding: 20px 20px; // Antes era 60px, lo bajamos para que todo suba
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px; // Reducimos la altura del bloque rosa
+    width: 100%;
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1400px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .header-photo img {
+        width: 200px; // Foto un poco más pequeña para ganar espacio arriba
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 6px solid variables.$blanco;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .header-text {
+        text-align: center;
+        padding: 0 40px;
+        color: variables.$gris-oscuro;
+        flex: 1;
+
+        h1 {
+            font-family: variables.$fuente-titulos;
+            font-size: 3rem;
+            margin-bottom: variables.$separacion-titulo; // Aquí aplicamos el "aire"
+            color: variables.$rosa-principal;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: variables.$rosa-oscuro;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: 1rem;
+            line-height: 1.4;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.title-princ {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: variables.$fuente-principal;
+    color: variables.$gris-oscuro;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.gallery-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .photo-grid {
+        display: grid;
+        // Crea columnas automáticas que se adaptan al tamaño de la pantalla
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px; // Espacio entre fotos
+        padding: 20px;
+
+        img {
+            width: 100%;
+            height: 350px; // Altura fija para que todas se vean parejas
+            object-fit: cover; // Corta la imagen para que llene el recuadro sin deformarse
+            border: 8px solid variables.$blanco; // Estilo Polaroid
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.03) rotate(2deg); // Se agranda y gira un poquito
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+            }
+        }
+    }
+}
+
+// Sección de cierre al final de la página
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra horizontalmente
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+
+    .texto-final {
+        font-family: variables.$fuente-principal;
+        color: variables.$gris-oscuro;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px; // Espacio antes del botón
+    }
+
+    .boton-volver {
+        background-color: variables.$rosa-oscuro;
+        color: variables.$blanco;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-decoration: none; // Quita el subrayado del link
+        font-family: variables.$fuente-principal;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(variables.$rosa-oscuro, 0.3);
+
+        &:hover {
+            background-color: variables.$gris-oscuro;
+            transform: translateY(-3px); // Pequeño salto al pasar el mouse
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+    }
+}

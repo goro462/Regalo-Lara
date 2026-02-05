@@ -1,0 +1,69 @@
+@use "variables";
+
+.viajes-main {
+    background-color: variables.$rosa-fondo;
+    padding: 40px;
+
+    .title-princ {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+        font-family: variables.$fuente-principal;
+        font-weight: 600;
+        color: variables.$gris-oscuro;
+        text-transform: uppercase;
+    }
+}
+
+.viaje-seccion {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    width: 100%;
+
+    h3, h4 {
+        font-family: variables.$fuente-principal;
+        color: variables.$rosa-oscuro;
+        font-size: 2.0rem;
+        margin-bottom: 20px;
+    }
+ h5 {
+        font-family: variables.$fuente-principal;
+        color: variables.$rosa-oscuro;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+
+    .photo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        img {
+            width: 300px; // Tamaño que te gustó
+            height: 350px;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+    }
+
+    // Lógica del dibujo de Paint:
+    &.izquierda {
+        align-items: flex-start; // Título y fotos a la izquierda
+        .photo-grid { justify-content: flex-start; }
+    }
+
+    &.derecha {
+        align-items: flex-end; // Título y fotos a la derecha
+        text-align: right;
+        .photo-grid { justify-content: flex-end; }
+    }
+
+    &.sueltas, &.brasil {
+        align-items: center; // Centrados
+        .photo-grid { justify-content: center; }
+    }
+}

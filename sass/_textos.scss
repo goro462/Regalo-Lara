@@ -1,0 +1,51 @@
+@use "variables";
+
+.subtitulo-2 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: variables.$rosa-oscuro !important;
+    font-family: variables.$fuente-principal !important; 
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+
+    // Quitamos el margen de abajo por completo
+    margin-top: 40px !important;
+    margin-bottom: 0px !important; 
+}
+
+.texto-espejo {
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: variables.$gris-oscuro; 
+    font-family: variables.$fuente-principal;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    max-width: 800px;
+    
+    // El margen negativo "succiona" el texto hacia arriba
+    margin: 10px auto 40px !important; 
+}
+
+.subtitulo-3 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: variables.$rosa-oscuro !important;
+    font-family: variables.$fuente-principal !important; 
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+
+    // Quitamos el margen de abajo por completo
+    margin-top: 40px !important;
+    margin-bottom: 0px !important; 
+    //   margin: -80px auto 40px !important; 
+}

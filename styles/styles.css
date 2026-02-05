@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/* Importación de fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;600&display=swap");
+.main-header {
+  background: linear-gradient(rgba(255, 182, 193, 0.8), rgba(255, 182, 193, 0.8));
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+  width: 100%;
+}
+.main-header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  gap: 20px;
+}
+.main-header .header-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.main-header .header-text {
+  text-align: center;
+  padding: 0 40px;
+  color: #4a4a4a;
+  flex: 1;
+}
+.main-header .header-text h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  margin-bottom: 45px;
+  color: #d81b60;
+}
+.main-header .header-text h2 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #ad1457;
+}
+.main-header .header-text p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.custom-button {
+  margin-bottom: 30px;
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #d81b60;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 8px 15px rgba(216, 27, 96, 0.3);
+  transition: all 0.3s ease;
+  user-select: none;
+  text-decoration: none;
+}
+.custom-button:hover {
+  background-color: #ad1457;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(216, 27, 96, 0.4);
+}
+.custom-button.small {
+  font-size: 0.9rem;
+  padding: 12px 25px;
+  margin: 20px;
+}
+
+.main-header {
+  background: linear-gradient(rgba(255, 182, 193, 0.8), rgba(255, 182, 193, 0.8));
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+  width: 100%;
+}
+.main-header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  gap: 20px;
+}
+.main-header .header-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.main-header .header-text {
+  text-align: center;
+  padding: 0 40px;
+  color: #4a4a4a;
+  flex: 1;
+}
+.main-header .header-text h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  margin-bottom: 45px;
+  color: #d81b60;
+}
+.main-header .header-text h2 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #ad1457;
+}
+.main-header .header-text p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.title-princ {
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: "Montserrat", sans-serif;
+  color: #4a4a4a;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+.gallery-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gallery-container .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+.gallery-container .photo-grid img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border: 8px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.gallery-container .photo-grid img:hover {
+  transform: scale(1.03) rotate(2deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  width: 100%;
+}
+.footer-section .texto-final {
+  font-family: "Montserrat", sans-serif;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+.footer-section .boton-volver {
+  background-color: #ad1457;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(173, 20, 87, 0.3);
+}
+.footer-section .boton-volver:hover {
+  background-color: #4a4a4a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.viajes-main {
+  background-color: #fce4ec;
+  padding: 40px;
+}
+.viajes-main .title-princ {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-transform: uppercase;
+}
+
+.viaje-seccion {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  width: 100%;
+}
+.viaje-seccion h3, .viaje-seccion h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #ad1457;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.viaje-seccion h5 {
+  font-family: "Montserrat", sans-serif;
+  color: #ad1457;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.viaje-seccion .photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.viaje-seccion .photo-grid img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border: 8px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.viaje-seccion.izquierda {
+  align-items: flex-start;
+}
+.viaje-seccion.izquierda .photo-grid {
+  justify-content: flex-start;
+}
+.viaje-seccion.derecha {
+  align-items: flex-end;
+  text-align: right;
+}
+.viaje-seccion.derecha .photo-grid {
+  justify-content: flex-end;
+}
+.viaje-seccion.sueltas, .viaje-seccion.brasil {
+  align-items: center;
+}
+.viaje-seccion.sueltas .photo-grid, .viaje-seccion.brasil .photo-grid {
+  justify-content: center;
+}
+
+.subtitulo-2 {
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #ad1457 !important;
+  font-family: "Montserrat", sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-top: 40px !important;
+  margin-bottom: 0px !important;
+}
+
+.texto-espejo {
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #4a4a4a;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  max-width: 800px;
+  margin: 10px auto 40px !important;
+}
+
+.subtitulo-3 {
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #ad1457 !important;
+  font-family: "Montserrat", sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 40px !important;
+  margin-bottom: 0px !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fce4ec;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.btn-text-close {
+  display: none;
+}
+
+.toggle-input {
+  display: none;
+}
+.toggle-input:checked + .custom-button {
+  background-color: #4a4a4a;
+}
+.toggle-input:checked + .custom-button .btn-text-open {
+  display: none;
+}
+.toggle-input:checked + .custom-button .btn-text-close {
+  display: inline;
+}
+.toggle-input:checked ~ .gallery-wrapper {
+  max-height: 5000px;
+  opacity: 1;
+  margin-top: 50px;
+}
+
+.gallery-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.intro-text {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: -10px;
+}
+.intro-text h1 {
+  font-family: "Dancing Script", cursive;
+  color: #ad1457;
+  font-size: 3.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.gallery-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.gallery-body img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 6px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.gallery-body img:hover {
+  transform: scale(1.05);
+}
+
+.imagen-body {
+  display: block;
+  margin: 40px auto !important;
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 6px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.imagen-body:hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=styles.css.map */

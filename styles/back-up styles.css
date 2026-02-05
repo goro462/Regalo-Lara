@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fce4ec; 
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.main-header {
+    background: linear-gradient(rgba(255, 182, 193, 0.8), rgba(255, 182, 193, 0.8));
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    width: 100%;
+}
+
+/* 3. Ajuste opcional: Si sientes que queda muy apretado a los bordes de la pantalla */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Cambiamos a center para que todo fluya mejor */
+    max-width: 1400px; /* Expandimos el contenedor principal */
+    width: 100%;
+    gap: 20px; /* Espacio entre las fotos y el texto */
+}
+
+.header-photo img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 6px solid #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.header-text {
+    text-align: center;
+    padding: 0 40px;
+    color: #4a4a4a;
+    flex: 1; 
+}
+
+.header-text h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    color: #d81b60;
+}
+
+.header-text h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #ad1457;
+}
+
+.header-text p {
+    text-transform: uppercase;
+    font-size: 1rem; /* Un pelín más grande para que se lea mejor */
+    line-height: 1.4;
+    max-width: 800px; /* Aumentamos de 500px a 800px para que se estire a lo largo */
+    margin: 0 auto;
+    font-weight: 600;
+    letter-spacing: 1px; /* Un toque de espacio entre letras para que respire */
+}
+
+/* --- NUEVA SECCIÓN: BOTÓN Y GALERÍA DE ESPEJOS --- */
+
+.album-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ad1457;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Escondemos el checkbox */
+.toggle-input {
+    display: none;
+}
+
+/* El Botón que diseñamos recién */
+.custom-button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #d81b60;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 8px 15px rgba(216, 27, 96, 0.3);
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.custom-button:hover {
+    background-color: #ad1457;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(216, 27, 96, 0.4);
+}
+
+/* Cambios de texto y color cuando se abre */
+.btn-text-close { display: none; }
+.toggle-input:checked + .custom-button .btn-text-open { display: none; }
+.toggle-input:checked + .custom-button .btn-text-close { display: inline; }
+.toggle-input:checked + .custom-button { background-color: #4a4a4a; }
+
+/* Contenedor de las 14 fotos */
+.gallery-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    margin-top: 50px;
+}
+
+.toggle-input:checked ~ .gallery-wrapper {
+    max-height: 5000px; /* Para que entren las 14 fotos */
+    opacity: 1;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 6px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}

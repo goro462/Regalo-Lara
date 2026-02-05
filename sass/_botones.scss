@@ -1,0 +1,31 @@
+@use "variables";
+
+.custom-button {
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: variables.$blanco;
+    background-color: variables.$rosa-principal;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 8px 15px rgba(variables.$rosa-principal, 0.3);
+    transition: all 0.3s ease;
+    user-select: none;
+    text-decoration: none;
+
+    &:hover {
+        background-color: variables.$rosa-oscuro;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 20px rgba(variables.$rosa-principal, 0.4);
+    }
+
+    &.small {
+        font-size: 0.9rem;
+        padding: 12px 25px;
+        margin: 20px;
+    }
+}
